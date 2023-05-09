@@ -7,12 +7,12 @@ server {
     }
 
     location /static {
-    alias /qnd3.0_app_stg/qnd30_app_stg/staticfiles;
+    alias /qnd30_app_stg/qnd30_app_stg/staticfiles;
     client_max_body_size    1000M;
      }
 
     location /media {
-    alias  /qnd3.0_app_stg/qnd30_app_stg/media;
+    alias  /qnd30_app_stg/qnd30_app_stg/media;
     client_max_body_size    1000M;
      }
 

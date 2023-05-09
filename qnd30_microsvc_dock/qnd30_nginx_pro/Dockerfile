@@ -15,15 +15,15 @@ USER root
 RUN apk add --no-cache openssl bash
 RUN chmod +x /run.sh
 
-RUN mkdir -p /qnd3.0_app_stg/qnd30_app_stg/staticfiles && \
-    chmod 755 /qnd3.0_app_stg/qnd30_app_stg/staticfiles && \
-    mkdir -p /qnd3.0_app_stg/qnd30_app_stg/mediafiles && \
-    chmod 755 /qnd3.0_app_stg/qnd30_app_stg/mediafiles && \
-    mkdir -p /qnd3.0_app_stg/qnd30_app_stgp/media && \
-    chmod 755 /qnd3.0_app_stg/qnd30_app_stg/media 
+RUN mkdir -p /qnd30_app_stg/qnd30_app_stg/staticfiles && \
+    chmod 755 /qnd30_app_stg/qnd30_app_stg/staticfiles && \
+    mkdir -p /qnd30_app_stg/qnd30_app_stg/mediafiles && \
+    chmod 755 /qnd30_app_stg/qnd30_app_stg/mediafiles && \
+    mkdir -p /qnd30_app_stg/qnd30_app_stgp/media && \
+    chmod 755 /qnd30_app_stg/qnd30_app_stg/media 
 
-VOLUME /qnd3.0_app_stg/qnd30_app_stg/staticfiles
-VOLUME /qnd3.0_app_stg/qnd30_app_stg/mediafiles
+VOLUME /qnd30_app_stg/qnd30_app_stg/staticfiles
+VOLUME /qnd30_app_stg/qnd30_app_stg/mediafiles
 VOLUME /vol/www
 VOLUME /vol/proxy
 VOLUME /etc/letsencrypt
