@@ -1,18 +1,18 @@
 server {
     listen 80;
-    server_name ${DOMAIN} www.${DOMAIN} 138.197.8.253 127.0.0.1;
+    server_name ${DOMAIN} www.${DOMAIN} 143.110.227.217 ;
 
     location /.well-known/acme-challenge/ {
         root /vol/www/;
     }
 
     location /static {
-    alias /qnd3.0_app/qnd30_app/staticfiles;
+    alias /qnd3.0_app_stg/qnd30_app_stg/staticfiles;
     client_max_body_size    1000M;
      }
 
     location /media {
-    alias  /qnd3.0_app/qnd30_app/media;
+    alias  /qnd3.0_app_stg/qnd30_app_stg/media;
     client_max_body_size    1000M;
      }
 

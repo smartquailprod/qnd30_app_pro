@@ -1,6 +1,6 @@
 server {
     listen      443 ssl;
-    server_name ${DOMAIN} www.${DOMAIN};
+    server_name ${DOMAIN} www.${DOMAIN} 143.110.227.217 127.0.0.1;
 
     ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
@@ -12,12 +12,12 @@ server {
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 
     location /static {
-         alias /qnd3.0_app/qnd30_app/staticfiles;
+         alias /qnd3.0_app_stg/qnd30_app_stg/staticfiles;
          client_max_body_size    1000M;
     }
     
     location /media {
-    alias  /qnd3.0_app/qnd30_app/media;
+    alias  /qnd3.0_app_stg/qnd30_app_stgp/media;
     client_max_body_size    1000M;
     }
 
