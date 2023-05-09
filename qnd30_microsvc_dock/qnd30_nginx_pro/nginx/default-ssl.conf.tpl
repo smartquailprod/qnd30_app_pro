@@ -1,6 +1,6 @@
 server {
     listen      443 ssl;
-    server_name ${DOMAIN} www.${DOMAIN} 143.110.227.217 127.0.0.1;
+    server_name ${DOMAIN} www.${DOMAIN}  10.124.0.3 127.0.0.1;
 
     ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
@@ -27,3 +27,4 @@ server {
         client_max_body_size 1000M;
     }
 }
+
