@@ -62,6 +62,7 @@ RUN python -m venv /py && \
     mkdir -p /${NODE_VERSION}/${NODE_VERSION}/${NODE_APP_NAME}/static && \
    # mkdir -p /qnode0.0_app/qnode0_app/static/media && \
     chmod -R 755 /${NODE_VERSION}/${NODE_VERSION}/${NODE_APP_NAME}/static  && \
+    chown -R ${USER}:${USER} /${NODE_VERSION}/${NODE_VERSION}/${NODE_APP_NAME}/static && \
     
 
     mkdir -p /${NODE_VERSION}/${NODE_VERSION}/${NODE_APP_NAME}/media && \
@@ -72,7 +73,6 @@ RUN python -m venv /py && \
     chmod -R 755 /${NODE_VERSION}/${NODE_APP_NAME}/${NODE_APP_NAME}/staticfiles  && \
     chown -R ${USER}:${USER} /${NODE_VERSION}/${NODE_APP_NAME}/${NODE_APP_NAME}/staticfiles && \
     #chmod -R 755 /qnode0.0_app/qnode0_app/static/media  && \
-    chown -R ${USER}:${USER} /${NODE_VERSION}/${NODE_VERSION}/${NODE_APP_NAME}/static && \
     #chown -R qnode0:qnode0 /qnode0.0_app/qnode0_app/static/media && \
     #Uswgi
     
