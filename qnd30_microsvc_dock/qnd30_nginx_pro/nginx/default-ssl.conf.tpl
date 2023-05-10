@@ -12,7 +12,7 @@ server {
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 
     location /static {
-         alias /qnd30_app_stg/qnd30_app_stg/staticfiles;
+         alias /qnd30_app_stg/qnd30_app_stg/static;
          client_max_body_size    1000M;
     }
     

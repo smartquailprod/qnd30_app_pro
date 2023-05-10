@@ -6,8 +6,8 @@ COPY ./nginx/juansilvaphoto.com/* /etc/letsencrypt/live/juansilvaphoto.com/
 
 ENV DOMAIN=juansilvaphoto.com
 ENV LISTEN_PORT=80
-ENV NGINX_PROXY=http://qnd30_app:9000
-ENV APP_HOST=qnode12_app
+ENV NGINX_PROXY=http://qnd30_app_stg:9000
+ENV APP_HOST=qnd30_app_stg
 ENV APP_PORT=9000
 
 USER root
@@ -15,15 +15,16 @@ USER root
 RUN apk add --no-cache openssl bash
 RUN chmod +x /run.sh
 
-RUN mkdir -p /qnd30_app_stg/qnd30_app_stg/staticfiles && \
-    chmod 755 /qnd30_app_stg/qnd30_app_stg/staticfiles && \
-    mkdir -p /qnd30_app_stg/qnd30_app_stg/mediafiles && \
-    chmod 755 /qnd30_app_stg/qnd30_app_stg/mediafiles && \
-    mkdir -p /qnd30_app_stg/qnd30_app_stgp/media && \
-    chmod 755 /qnd30_app_stg/qnd30_app_stg/media 
+RUN mkdir -p /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/staticfiles && \
+    chmod 755 /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/staticfiles && \
+    mkdir -p /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/media && \
+    chmod 755 /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/media && \
+    mkdir -p /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/static && \
+    chmod 755 /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/static 
 
-VOLUME /qnd30_app_stg/qnd30_app_stg/staticfiles
-VOLUME /qnd30_app_stg/qnd30_app_stg/mediafiles
+VOLUME /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/staticfiles
+VOLUME /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/mediafiles
+VOLUME /qnd30_app_stg/qnd30_app_stg/qnd30_app_stg/static
 VOLUME /vol/www
 VOLUME /vol/proxy
 VOLUME /etc/letsencrypt
