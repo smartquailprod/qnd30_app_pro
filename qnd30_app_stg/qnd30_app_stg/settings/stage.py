@@ -273,7 +273,7 @@ ALLOWED_HOSTS = ['*']
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
-STATICFILES_DIRS = [BASE_DIR / "staticfiles"]  
+STATICFILES_DIRS = [BASE_DIR / "qnd30_app_stg/staticfiles"]  
 STATIC_URL = "/static/"
 STATIC_ROOT = STATIC_ROOT = BASE_DIR / "static"
 
