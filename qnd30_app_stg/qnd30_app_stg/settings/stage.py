@@ -267,8 +267,8 @@ if DB_IS_AVIAL and POSTGRES_READY:
 #Static files DevMod
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "staticfiles"]  
-STATIC_ROOT = STATIC_ROOT = BASE_DIR / "static"
+STATICFILES_DIRS = [BASE_DIR / "static"]  
+STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 MEDIA_URL = "/media/"
