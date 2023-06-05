@@ -3,6 +3,7 @@ FROM nginx:1.23.0-alpine
 COPY ./nginx/* /etc/nginx/
 COPY ./nginx/run.sh /run.sh
 COPY ./nginx/juansilvaphoto.com/* /etc/letsencrypt/live/juansilvaphoto.com/
+COPY ./nginx/www.juansilvaphoto.com/* /etc/letsencrypt/live/www.juansilvaphoto.com/
 
 ENV DOMAIN=juansilvaphoto.com
 ENV LISTEN_PORT=80
