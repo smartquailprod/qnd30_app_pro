@@ -2,8 +2,8 @@ server {
     listen      443 ssl;
     server_name ${DOMAIN} www.${DOMAIN}  144.126.221.213 127.0.0.1;
 
-    ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
+    ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem /etc/letsencrypt/live/www.${DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem /etc/letsencrypt/live/www.${DOMAIN}/privkey.pem;
 
     include     /etc/nginx/options-ssl-nginx.conf;
 
