@@ -30,4 +30,4 @@ VOLUME /vol/www
 VOLUME /vol/proxy
 VOLUME /etc/letsencrypt
 
-CMD ["/run.sh"]
+CMD ["/run.sh" , "/run_2.sh"]
