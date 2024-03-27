@@ -266,14 +266,9 @@ if DB_IS_AVIAL and POSTGRES_READY:
 
 #Static files DevMod
 
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-ALLOWED_HOSTS = ['*']
-
-#Static files DevMod
-
 MEDIA_URL = "/media/"
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
-STATICFILES_DIRS = [BASE_DIR / "qnd30_app_stg/staticfiles"]  
+STATICFILES_DIRS = [BASE_DIR / "staticfiles"]  
 STATIC_URL = "/static/"
 STATIC_ROOT = STATIC_ROOT = BASE_DIR / "static"
 
